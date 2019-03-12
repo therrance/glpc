@@ -2,23 +2,39 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-class MoviesTable extends Component{
-  // constructor(props){
-  //   super(props);
-  // }
-  
-  render(){
-    const moviesArr = JSON.stringify( this.props.movies );
-    
-    return(
-        <div className="App">
-        <header className="App-header">
-          <p>
-            {moviesArr}
-          </p>
-        </header>
-      </div>
-      );
+class MovieRow extends Component {
+  render() {
+    const movie = this.props.movie;
+
+    return (
+      <tr>
+        <td>{movie.Title}</td>
+        <td>{movie.Year}</td>
+        <td>{movie.Rated}</td>
+    </tr>
+    );
+  }
+}
+
+class MoviesTable extends Component {
+
+  render() {
+    const rows = this.props.movies.map(item => (
+      <MovieRow movie={item} />
+    ));
+
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Rated</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    );
   }
 }
 
