@@ -1,5 +1,59 @@
-h1 {
-  background-color: #2d966a;
+#root, body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+.App {
+  display: flex;
+  height: 100%; }
+
+.sidebar {
+  height: 90%;
+  width: 350px;
+  border-right: 1px solid #eaeaea;
+  margin: 50px 0px;
+  padding-left: 30px; }
+  .sidebar__title {
+    color: #89EDA0;
+    font-size: 2em;
+    margin: 0; }
+
+.Navigation__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  min-height: 100px;
+  justify-content: space-around; }
+.Navigation__button {
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color .1s linear; }
+  .Navigation__button:hover {
+    color: #89EDA0; }
+  .Navigation__button--active {
+    text-decoration: underline; }
+
+.Movie {
+  margin: 60px 50px 0px 100px;
+  width: 70%;
   font-family: "Roboto", sans-serif; }
+  .Movie__title {
+    margin: 0;
+    font-size: 3em; }
+  .Movie__sub-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 50px;
+    text-transform: uppercase; }
+  .Movie__actors {
+    padding-left: 0;
+    list-style-type: none; }
+    .Movie__actors > li {
+      margin: 10px 0px; }
+  .Movie__ratings {
+    padding-left: 20px; }
+    .Movie__ratings > li {
+      margin: 10px 0px; }
 
 /*# sourceMappingURL=index.css.map */

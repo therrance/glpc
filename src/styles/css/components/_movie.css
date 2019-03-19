@@ -1,0 +1,34 @@
+.Movie {
+    margin: 60px 50px 0px 100px;
+    width: 70%;
+    font-family: var(--font-main);
+}
+
+.Movie__title {
+    margin: 0;
+    font-size: 3em;
+}
+
+.Movie__sub-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.Movie__actors {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.Movie__actors>li {
+    margin: 10px 0px;
+}
+
+.Movie__ratings {
+    padding-left: 20px;
+}
+
+.Movie__ratings>li {
+    margin: 10px 0px;
+}

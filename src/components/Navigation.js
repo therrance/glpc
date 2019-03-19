@@ -12,14 +12,20 @@ class Navigation extends Component {
 
     render() {
         return (
-            <nav>
-                <ul>
+            <nav className="Navigation">
+                <ul className='Navigation__list'>
                     {
                         this.props.movies.map(movie => 
                             <li key={movie.imdbID}>
                                 <button 
                                     id={`${movie.imdbID}_button`}
                                     onClick={this.changeMovie}
+                                    className={
+                                        movie.imdbID === this.props.activeMovie ? 
+                                        "Navigation__button Navigation__button--active"
+                                        :
+                                        'Navigation__button'
+                                    }
                                 >
                                     {movie.Title}
                                 </button>
@@ -33,7 +39,8 @@ class Navigation extends Component {
 }
 
 Navigation.propTypes = {
-    movies: PropTypes.array.isRequired
+    movies: PropTypes.array.isRequired,
+    movieToSelect: PropTypes.func.isRequired
 };
 
 export default Navigation;

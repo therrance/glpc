@@ -8,18 +8,18 @@ class Movie extends Component {
 
         return (
             <div className="Movie">
-                <h2>{this.props.title}</h2>
-                <h3>Year: <em>{this.props.year}</em></h3>
+                <h2 className="Movie__title">{this.props.title}</h2>
+                <h3 className="Movie__sub-title">Year: <em>{this.props.year}</em></h3>
                 
-                <h3>Actors</h3>
-                <ul>
+                <h3 className="Movie__sub-title">Actors</h3>
+                <ol className="Movie__actors">
                     {actors}
-                </ul>
-                
-                <h3>Ratings</h3>
-                <ol>
-                    {ratings}
                 </ol>
+                
+                <h3 className="Movie__sub-title">Ratings</h3>
+                <ul className="Movie__ratings">
+                    {ratings}
+                </ul>
             </div>
         );
     }

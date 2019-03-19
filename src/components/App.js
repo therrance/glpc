@@ -48,14 +48,16 @@ class App extends Component {
 
     return (
       <div className="App">
+      <aside className="sidebar">
+        <h1 className='sidebar__title'>Movies Database</h1>
         <Navigation 
           movies={this.state.movies} 
-          movieToSelect={this.selectNewMovie
-          }
+          activeMovie={this.state.selectedMovie}
+          movieToSelect={this.selectNewMovie}
         />
-        <h1>Movies Database</h1>
+      </aside>
         {
-        movieToSelect ? 
+          movieToSelect ? 
           <Movie
             title={movieToSelect.Title}
             year={movieToSelect.Year}
