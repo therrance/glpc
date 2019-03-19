@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACC,gBAAgB,ECDP,OAAO;EDEhB,WAAW,ECDH,oBAAoB",
+"sources": ["../scss/base/_elements.scss","../scss/base/_variables.scss"],
+"names": [],
+"file": "index.css"
+}
